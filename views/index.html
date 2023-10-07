@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/logo.png">
+  <title>Excel Data Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body onload="fetchData()">
+  <header>
+    <nav>
+  
+     
+    <a href="/logout">Logout</a></nav>
+  </header>
+
+  <div id="loadingFeedback" class="hidden">
+    <p>Loading...</p>
+  </div>
+
+  <div id="downloadFeedback" class="hidden">
+    <p>File Downloaded!</p>
+  </div>
+
+  <form id="uploadForm" action="/upload">
+    <label for="fileInput">Upload Excel Sheet:</label>
+    <input type="file" id="fileInput" name="file">
+    <button type="submit" >Upload</button>
+  </form>
+
+ 
+
+  <table id="dataTable">
+    <!-- Table will be populated dynamically -->
+  </table>
+
+
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
